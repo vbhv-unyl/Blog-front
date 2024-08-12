@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    color: #111;
+}
+
+.main-container {
+    width: 100%;
+    color: #111;
+}
+
+.container {
+    display: flex;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.hamburger-menu {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 1000;
+}
+
+.hamburger-button {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+}
+
+.nav-links {
+    display: block;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100%;
+    z-index: 999;
+    transition: right 0.3s ease-in-out;
+}
+
+.nav-links.show {
+    right: 0;
+}
+
+.nav-links a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    background-color: #111;
+}
+
+.main-content {
+    padding: 20px;
+    transition: margin-right 0.3s ease-in-out;
+}
+
+.container.shift .main-content {
+    margin-right: 200px;
+}
